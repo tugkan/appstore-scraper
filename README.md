@@ -55,6 +55,12 @@ The input of this scraper should be JSON containing the list of pages on XXXXX t
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
+### Tip
+If you want to scrape a specific id or media, always use Lookup mode. Lookup mode is suggested for searching up specific values or assets on the App Store or iTunes. For example; if you want to search for the id of `400763833`, then select Lookup mode and enter `400763833` into the `Term` section.
+
+On the other hand, if you want to search over specific keywords or filters, Search mode will do the job for you.
+
+
 ### Compute Unit Consumption
 
 The actor optimized to run blazing fast and scrape many as listings as possible. Therefore, it forefronts all listing detail requests. If actor doesn't block very often it'll scrape 100 listings in 2 minutes with ~0.01-0.02 compute units.
