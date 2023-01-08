@@ -16,7 +16,7 @@ The App Store data scraper supports the following features:
 
 -   Scrape by filters - Media type, country or keyword. You can customize the results
 
--   Lookup by multiple ids - If you need to scrape multiple media, or multiple competitors you can retrieve them at onces.
+-   Lookup by multiple ids - If you need to scrape multiple media, or multiple competitors you can retrieve them at once.
 
 ## Bugs, fixes, updates and changelog
 
