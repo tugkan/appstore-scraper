@@ -24,37 +24,29 @@ The App Store data scraper supports the following features:
 
 This scraper is under active development. If you have any feature requests you can create an issue from [here](https://github.com/epctex/appstore-scraper/issues).
 
-## Setup & Usage
-
-You can see how this actor works these videos:
-
-### Using Search
-
-[![Apify - App Store Scraper - Using Search](https://i.imgur.com/nfilL6Z.png)](https://www.youtube.com/watch?v=Fy4rLed-jEE)
-
-You can check the output of this example [here](https://api.apify.com/v2/datasets/gLMI3Gi9GfG9gTcpH/items?clean=true&format=json).
-
-### Using Start URLs
-
-[![Apify - App Store Scraper - Using Start URLs](https://i.imgur.com/kHlDpgq.png)](https://www.youtube.com/watch?v=FUAWQbQ1uHI)
-
-You can check the output of this example [here](https://api.apify.com/v2/datasets/ivCfm05aXFltiNFDQ/items?clean=true&format=json).
-
 ## Input Parameters
 
-The input of this scraper should be JSON containing the list of pages on XXXXX that should be visited. Required fields are:
+The input of this scraper should be JSON containing the list of pages on App Store that should be visited. Possible fields are:
 
-| Field             | Type          | Description                                                                                                     |
-| ----------------- | ------------- | --------------------------------------------------------------------------------------------------------------- |
-| term              | String        | Keyword that you want to search on App Store.                                                                   |
-| country           | String (Enum) | Country of the App Store that you'd like to scrape on.                                                          |
-| mediaType         | Array         | Media Type of the assets that you will get from the App Store                                                   |
-| mode              | String (Enum) | Mode of the actor. It can be "search" or "lookup".                                                              |
-| startUrls         | Array         | (optional) List of Apple Store URLs. You should only provide detail URLs from iTunes or App Store               |
-| includeReviews          | Boolean       | (optional) If you want to include the reviews per each of the application, you can enable this option. Please keep in mind that reviews will be retrieved in a paginated manner. Therefore the number of requests proportionally increase. |
-| maxItems          | Integer       | (optional) You can limit scraped products. This should be useful when you search through the big subcategories. |
-| proxy             | Object        | Proxy configuration                                                                                             |
-| customMapFunction | String        | (optional) Function that takes each objects handle as argument and returns object with executing the function   |
+- `term`: (Optional) (String) Keyword that you want to search on App Store.
+
+- `startUrls`: (Optional) (Array) List of Apple Store URLs. You should only provide detail URLs from iTunes or App Store.
+
+- `country`: (Optional) (String) Country of the App Store that you'd like to scrape on.
+
+- `mediaType`: (Optional) (String) Media Type of the assets that you will get from the App Store.
+
+- `mode`: (Optional) (String) Mode of the actor. It can be "search" or "lookup".
+
+- `includeReviews`: (Optional) (Boolean) If you want to include the reviews per each of the application, you can enable this option. Please keep in mind that reviews will be retrieved in a paginated manner. Therefore the number of requests proportionally increase.
+
+- `endPage`: (Optional) (Number) Final number of page that you want to scrape. Default is `Infinite`. This is applies to all `search` request and `startUrls` individually.
+
+- `maxItems`: (Optional) (Number) You can limit scraped items. This should be useful when you search through the big lists or search results.
+
+- `proxy`: (Required) (Proxy Object) Proxy configuration.
+
+- `customMapFunction`: (Optional) (String) Function that takes each objects handle as argument and returns object with executing the function.
 
 This solution requires the use of **Proxy servers**, either your own proxy servers or you can use [Apify Proxy](https://www.apify.com/docs/proxy).
 
@@ -96,7 +88,7 @@ If you provide incorrect input to the actor, it will immediately stop with failu
 
 During the run, the actor stores results into a dataset. Each item is a separate item in the dataset.
 
-You can manage the results in any languague (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this XXXXX actor.
+You can manage the results in any languague (Python, PHP, Node JS/NPM). See the FAQ or <a href="https://www.apify.com/docs/api" target="blank">our API reference</a> to learn more about getting results from this Appstore actor.
 
 ## Scraped App Store Media
 
